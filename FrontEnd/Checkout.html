@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Cart</title>
+        <link rel="stylesheet" href="./FoundationsStyling.css"/>
+    </head>
+
+    <body">
+        <img src="./revature.png" alt="Revature Logo" style="max-width: 300px; position: absolute;">
+
+        <span id="nav-bar">
+            <a href="./LoggedInHome.html" style="font-size: 200%; position: relative; text-align: left;">Home</a>
+            <a href="./ShoppingCart.html" style="font-size: 200%;">Cart</a>
+            <a href="./OrderHistory.html" style="font-size: 200%;">Orders</a>
+            <a href="./HomePage.html" style="font-size: 200%;">Sign Out</a>
+        </span>
+
+        <br>
+
+        <div style="text-align: center; padding-left: 25%; padding-right: 25%;">
+            <div class="checkout">
+                <h1 class="shipping">Shipping Information</h1>
+    
+                <br>
+    
+                <form class="shipping">
+                    <label for="fName">First Name:</label>
+                    <br>
+                    <input id="fName" type="text">
+                    <br>
+                    <label for="lName">Last Name:</label>
+                    <br>
+                    <input id="lName" type="text">
+                    <span id="errorShipName" style="color: red;"></span>
+                    <br>
+                    <label for="shippingAddress">Shipping Address:</label>
+                    <br>
+                    <input id="shippingAddress" type="text">
+                    <span id="errorShipAdd" style="color: red;"></span>
+                    <br>
+                    <br>
+                    <label for="shippingZip">Zip Code:</label>
+                    <input id="shippingZip" type="text" style="width: 3rem;">
+                    <label for="shippingState">State Abbreviation:</label>
+                    <input id="shippingState" type="text" style="width: 1.5rem;">
+                    <span id="errorShipZip" style="color: red;"></span>
+                </form>
+    
+                <br>
+                <br>
+                <br>
+    
+                <h1 class="payment">Payment Information</h1>
+    
+                <br>
+    
+                <form class="payment">
+                    <label for="cardName">Cardholder Name:</label>
+                    <br>
+                    <input id="cardName" type="text">
+                    <span id="errorCardName" style="color: red;"></span>
+                    <br>
+                    <label for="cardNum">Card Number:</label>
+                    <br>
+                    <input id="cardNum" type="text">
+                    <span id="errorCardNum" style="color: red;"></span>
+                    <br>
+                    <label for="cardCvv">CVV:</label>
+                    <input id="cardCvv" type="text" style="width: 3rem;">
+                    <label for="cardExpiration">Expiration:</label>
+                    <input id="cardExpiration" type="text" style="width: 4rem;">
+                    <span id="errorCardDet" style="color: red;"></span>
+                </form>
+    
+                <br>
+        
+                <button style="width: 200px; height: 50px;" onclick="checkoutHandler()">Complete Checkout</button>
+                <br>
+                <br>
+                <br>
+
+            </div>
+        </div>
+        
+        
+
+        <script src="./Checkout.js"></script>
+
+        <br>
+    </body>
+</html>

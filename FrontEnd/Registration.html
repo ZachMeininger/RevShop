@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="./FoundationsStyling.css"/>
+    </head>
+
+    <body>
+
+        <img src="./revature.png" alt="Revature Logo" style="max-width: 300px; position: absolute;">
+
+        <span id="nav-bar">
+            <a href="./HomePage.html" style="font-size: 200%; position: relative; text-align: left;">Home</a>
+            <a href="./LoginPage.html" style="font-size: 200%;">Sign In</a>
+            <a class ="active" href="./Registration.html" style="font-size: 200%;">Sign Up</a>
+        </span>
+
+        <br>
+
+        <h1 style="text-align: center;">Create A New Account</h1>
+
+        <form id="registerForm" style="text-align: center;">
+            <label for="emailReg">Email:</label>
+            <br>
+            <input id="emailReg" type="email" placeholder="Email Address">
+            <br>
+            <span id="errorMsgEmail" style="color: red;"></span>
+            <label for="passwordReg">Password:</label>
+            <br>
+            <input id="passwordReg" type="password" placeholder="Password">
+            <br>
+            <span id="errorMsgPass" style="color: red;"></span>
+            <label for="securityQReg">Security Question:</label>
+            <br>
+            <input id="securityQReg" type="text" placeholder="Security Question">
+            <br>
+            <span id="errorMsgQ" style="color: red;"></span>
+            <label for="securityAReg">Security Answer:</label>
+            <br>
+            <input id="securityAReg" type="text" placeholder="Security Answer">
+            <br>
+            <span id="errorMsgA" style="color: red;"></span>
+            <input id="regClick" type="button" value="Create Account">
+        </form>
+
+        <script src="./RegisterAccount.js"></script>
+    </body>
+</html>

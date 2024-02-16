@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Cart</title>
+        <link rel="stylesheet" href="./FoundationsStyling.css"/>
+    </head>
+
+    <body onload="cartHandler()">
+        <img src="./revature.png" alt="Revature Logo" style="max-width: 300px; position: absolute;">
+
+        <span id="nav-bar">
+            <a href="./LoggedInHome.html" style="font-size: 200%; position: relative; text-align: left;">Home</a>
+            <a class ="active" href="./ShoppingCart.html" style="font-size: 200%;">Cart</a>
+            <a href="./OrderHistory.html" style="font-size: 200%;">Orders</a>
+            <a href="./HomePage.html" style="font-size: 200%;">Sign Out</a>
+        </span>
+
+        <br>
+
+        <div id="cart"></div>
+
+        <br>
+
+        <div style="text-align: center;">
+            <button onclick="window.location.href='./Checkout.html';" style="width: 200px; height: 50px;">Checkout</button>
+        </div>
+
+        <script src="ShoppingCart.js"></script>
+    </body>
+</html>

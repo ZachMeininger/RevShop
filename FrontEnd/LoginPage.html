@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="./FoundationsStyling.css"/>
+    </head>
+
+    <body style="background-image: url(./handshake.jpg); background-repeat: no-repeat; background-size: 80%; background-position-x: right;">
+        
+        <img src="./revature.png" alt="Revature Logo" style="max-width: 300px; position: absolute;">
+
+        <span id="nav-bar">
+            <a href="./HomePage.html" style="font-size: 200%; position: relative; text-align: left;">Home</a>
+            <a class ="active" href="./LoginPage.html" style="font-size: 200%;">Sign In</a>
+            <a href="./Registration.html" style="font-size: 200%;">Sign Up</a>
+        </span>
+
+        <br>
+
+        <h1 id="loginForm">Login</h1>
+        
+        <form id="loginForm">
+            <label for="emailInput">Email:</label>
+            <br>
+            <input id="emailInput" type="email" placeholder="Email Address">
+            <br>
+            <label for="passwordInput">Password:</label>
+            <br>
+            <input id="passwordInput" type="password" placeholder="Password">
+            <span id="errorMsg" style="color: red;"></span>
+            <br>
+            <input type="checkbox" id="rememberMe" name="rememberMe" value="Remember">
+            <label for="rememberMe">Remember Me</label>
+            <input type="checkbox" id="staySigned" name="staySigned" value="Signed">
+            <label for="staySigned">Stay Signed In</label>
+            <br>
+            <input id="logClick" type="button" value="Sign in">
+        </form>
+
+        <br>
+
+        <p id="loginForm">
+            <a href = "./Registration.html">Create New Account</a>
+            <br>
+            <a href = "">Forgot Password</a>
+        </p>
+
+        <script src="./Login.js"></script>
+    </body>
+</html>
