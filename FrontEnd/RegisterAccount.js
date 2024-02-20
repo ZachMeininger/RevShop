@@ -2,7 +2,7 @@ const regButton = document.getElementById('regClick');
 regClick.addEventListener("click", handleRegister);
 
 let BuyerAccount = {
-    userId: 1,
+    userId: 0,
     userEmail: '',
     userPassword: '',
     securityQuestion: '',
@@ -24,11 +24,11 @@ function handleRegister() {
     {
         document.getElementById("errorMsgPass").innerHTML = "<h4>Invalid Password</h4>";
     }
-    else if((BuyerAccount.securityQuestion).length == 0)
+    else if((BuyerAccount.securityQuestion).length < 1)
     {
         document.getElementById("errorMsgQ").innerHTML = "<h4>Must include security question</h4>";
     }
-    else if((BuyerAccount.securityAnswer).length == 0)
+    else if((BuyerAccount.securityAnswer).length < 1)
     {
         document.getElementById("errorMsgA").innerHTML = "<h4>Must include security answer</h4>";
     }
@@ -45,7 +45,11 @@ function handleRegister() {
         headers: {"Content-type": "application/json; charset=UTF-8"}
         })
 
-        if(response.status >= 400 && response.status < 500)
+        if(response.status >= 500)
+        {
+            console.log("Error");
+        }
+        else if(response.status >= 400 && response.status < 500)
         {
             document.getElementById("errorMsg").innerHTML = "<h4>Invalid Email or Password</h4>";
         }

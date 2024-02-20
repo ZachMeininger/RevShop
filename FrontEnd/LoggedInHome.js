@@ -17,7 +17,6 @@ function shopHandler() {
 
 function shopSearchHandler() {
     let searchText = document.getElementById("search").value;
-    console.log(searchText);
 
     txt = "";
 
@@ -35,7 +34,6 @@ function shopSearchHandler() {
 
 function shopTagHandler() {
     let searchTag = document.querySelector('#tag').value;
-    console.log(searchTag);
 
     txt = "";
 
