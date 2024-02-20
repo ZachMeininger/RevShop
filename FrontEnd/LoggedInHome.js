@@ -66,13 +66,9 @@ function addToCartHandler(itemId) {
     let userId = localStorage.getItem("userId");
     let itemQuantity = document.querySelector('#select' + itemId).value;
 
-    console.log(itemQuantity);
-
     CartItem.userId = Number(userId);
     CartItem.itemId = itemId;
     CartItem.itemQuantity = itemQuantity;
-
-    console.log(CartItem);
 
     fetch("http://localhost:8080/addToCart", {
         method: "POST",
