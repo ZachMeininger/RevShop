@@ -12,6 +12,15 @@ let BuyerAccount = {
 function handleLogin() {
     BuyerAccount.userEmail = document.getElementById("emailInput").value;
     BuyerAccount.userPassword = document.getElementById("passwordInput").value;
+
+    if((BuyerAccount.userEmail).length == 0 || (BuyerAccount.userPassword) == 0)
+    {
+        document.getElementById("errorMsg").innerHTML = "<h4>Please fill in Email and Password</h4>";
+    }
+    else
+    {
+        fetchData();
+    }
     
     async function fetchData() {
 
@@ -34,7 +43,7 @@ function handleLogin() {
         }
     }
 
-    fetchData();
+    
 
 
     /*let response = fetch("http://localhost:8080/login", {
